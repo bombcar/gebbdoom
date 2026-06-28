@@ -145,7 +145,7 @@ This is only one of the many possible trees which could have been generated from
 \centering
 \includegraphics[width=.5\textwidth]{drawings/doom_map_walk.pdf}
 \end{wrapfigure}
-To use the BSP, we only need to traverse it depth first and choose a branch based on our position in the map. Let's take two examples using the BSP in Figure\ref{doom_map_split3} on page \pageref{doom_map_split3}. For convenience of notation, sub-sectors have been labeled \cw{1} to \cw{4} and only the splitting lines are marked.\\
+To use the BSP, we only need to traverse it depth first and choose a branch based on our position in the map. Let's take two examples using the BSP in Figure~\ref{doom_map_split3} on page~\pageref{doom_map_split3}. For convenience of notation, sub-sectors have been labeled \cw{1} to \cw{4} and only the splitting lines are marked.\\
 \par
 From point of view \circled{\cw{P1}}, traversing the BSP takes three tests. \cw{P1} is on the right\footnote{On the drawing it is on the left but remember that spliting plans have direction (shown via an arrow head). If your turn the page upside down, sub-sector \cw{1} indeed is on the right of \cw{H}} of \cw{H}, on the left of \cw{G}, and on the left of \cw{F}. This gives the front to back order: \cw{1,2,3,4}. Notice that it doesn't matter what order segments within a subsector are drawn since all subsectors are convex.\\
 \par
@@ -166,7 +166,7 @@ For the tool to build the best BSP possible a splitter selection heuristic had t
 \par
 \drawing{E1M1_lines}{E1M1, a.k.a Episode 1 Map 1.}
 \par
-Figure\ref{E1M1_segs} shows the seven first splitters selected on E1M1. The first level is in red, second level in blue and the third level in thick black. Notice how AA splitters are favored.\\
+Figure~\ref{E1M1_segs} shows the seven first splitters selected on E1M1. The first level is in red, second level in blue and the third level in thick black. Notice how AA splitters are favored.\\
 \par
 Switching from a sector flooding algorithm to a Binary Space Partitioning algorithm not only added preprocessing time and latency to map designers -- there was another side effect that was more of an issue since it affected players. Because the BSP created new vertices, wall positions are set in stone, there is no way to move walls at runtime.
 
@@ -377,7 +377,7 @@ The problem to solve here is: What pixel do you select between \cw{A} and \cw{B}
 \par
 Subpixel accuracy is slightly more difficult to perform. Here the fractional part is not discarded but used while navigating from \cw{A} to \cw{B}.\\
 \par
-Figure \ref{subpixel_before} shows the two methods side by side. The difference looks negligible but it is one of the most important features of the engine which made the world feel "solid".
+Figure~\ref{subpixel_before} shows the two methods side by side. The difference looks negligible but it is one of the most important features of the engine which made the world feel "solid".
 \drawing{subpixel_before}\\
 \par
 At first sight it seems the two methods are different yet equivalent, but look at what happens when things start to move, such as in the case where \cw{A} moves \cw{0.3} units down.\\
